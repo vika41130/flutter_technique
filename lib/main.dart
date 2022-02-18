@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/subscription/subscription.index.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,9 +39,30 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: Text(
-          'First App',
-          style: TextStyle(fontSize: 30,),
+        child: Row(
+          children: [
+            Expanded(
+              child: SingleSubscription()
+            ),
+            Container(
+              width: 10, height: MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            Expanded(
+              child: BroadcastSubscription()
+            ),
+            Container(
+              width: 10, height: MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            Expanded(
+              child: TransformSubscription()
+            ),
+          ],
         ),
       ),
     );
