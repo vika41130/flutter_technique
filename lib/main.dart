@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'bounders/pages.index.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -12,11 +10,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Provider',
+      title: 'First App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Provider'),
+      home: MyHomePage(title: 'First App'),
     );
   }
 }
@@ -40,18 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: Center(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(child: createSingleBounderProvider()),
-            Container(
-              child: SizedBox(width: 10, height: MediaQuery.of(context).size.height,),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-            Expanded(child: createMultiBounderProvider()),
-          ],
+        child: Text(
+          'First App',
+          style: TextStyle(fontSize: 30,),
         ),
       ),
     );
