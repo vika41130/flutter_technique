@@ -46,6 +46,14 @@ class CountSource {
     _countTransformController.sink.add(countTransform);
   }
 
+  void completeBroadcastStream() {
+    _countBroadcastController.sink.close();
+  }
+
+  void errorBroadcastStream() {
+    _countBroadcastController.sink.addError('Error!');
+  }
+
   void dispose() {
     _countController.close();
     _countBroadcastController.close();

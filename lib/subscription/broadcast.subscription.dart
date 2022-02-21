@@ -22,6 +22,20 @@ class BroadcastSubscription extends StatelessWidget {
             child: Text('Increment')
           ),
           SizedBox(height: 10,),
+          ElevatedButton(
+            onPressed: () {
+              CountSource().completeBroadcastStream();
+            },
+            child: Text('Complete')
+          ),
+          SizedBox(height: 10,),
+          ElevatedButton(
+            onPressed: () {
+              CountSource().errorBroadcastStream();
+            },
+            child: Text('Error')
+          ),
+          SizedBox(height: 10,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
