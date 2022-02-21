@@ -27,7 +27,7 @@ class Broadcast extends StatelessWidget {
                 return Text(snapshot.data.toString());
               }
             case ConnectionState.done:
-              return Text('Completed');
+              return Text('Completed!');
             default: // error
               return Text(snapshot.data.toString());
           }
