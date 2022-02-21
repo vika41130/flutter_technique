@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/source/source.index.dart';
 import 'package:flutter_application_1/subscription/subscription.index.dart';
 
 void main() {
@@ -62,9 +63,24 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
               child: TransformSubscription()
             ),
+            Container(
+              width: 10, height: MediaQuery.of(context).size.height,
+              decoration: BoxDecoration(
+                color: Colors.blue,
+              ),
+            ),
+            Expanded(
+              child: ListenCountSource()
+            ),
           ],
         ),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    CountSource().dispose();
+    super.dispose();
   }
 }

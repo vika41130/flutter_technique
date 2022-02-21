@@ -27,7 +27,7 @@ class CountSource {
     sink.add(data);
   });
   int countTransform = 0;
-  StreamController<int> _countTransformController = new StreamController<int>();
+  StreamController<int> _countTransformController = new StreamController<int>.broadcast();
   Stream<int> get countTransformStream => _countTransformController.stream.transform(_counterTransform);
   // transform stream [end]
 
