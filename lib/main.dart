@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/pages.index.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,15 +35,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions: [
-        ],
+        actions: [],
       ),
       body: Center(
-        child: Text(
-          'First App',
-          style: TextStyle(fontSize: 30,),
-        ),
-      ),
+        child: ProductPage()),
     );
   }
 }
