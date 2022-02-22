@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/bloc/cart.bloc/cart.bloc.index.dart';
+import 'package:flutter_application_1/bloc/favourite.bloc/favourite.bloc.index.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Product extends StatelessWidget {
@@ -22,7 +23,14 @@ class Product extends StatelessWidget {
               context.read<CartBloc>().add(CartAdd(productName: productName));
             },
             child: Text('Add to cart')
-          )
+          ),
+          SizedBox(height: 10,),
+          ElevatedButton(
+            onPressed: () {
+              context.read<FavouriteBloc>().add(FavouriteAdd(productName: productName));
+            },
+            child: Text('Add to Favourite')
+          ),
         ],
       ),
     );
